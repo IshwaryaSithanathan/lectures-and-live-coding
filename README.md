@@ -12,4 +12,4 @@ Pre-requisites: [Node.js](https://nodejs.org/en/download/) and *npm*
 
 2. Use `cd` to navigate to the directory you're interested in
 
-3. In most cases you will need to run `npm install`. In some cases you may need to setup a database -- see specific instructions in the subdirectory.
+3. In most cases you will need to run `npm install` in that directory. In some cases you may need to setup a database -- see specific instructions in that directory.
