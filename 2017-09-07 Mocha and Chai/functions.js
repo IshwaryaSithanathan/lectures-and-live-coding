@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const outputFile = process.env.OUTPUT_FILE || "output.txt";
+const OUTPUT_FILE = process.env.OUTPUT_FILE || "output.txt";
 
 const lastThreeChars = (str) => {
   let newStr = str.toString()
@@ -12,16 +12,9 @@ const writeToFileXTimes = (str, n) => {
   for (let i = 1; i <= n; i++) {
     result += str
   }
-  fs.appendFileSync(outputFile, result);
+  fs.appendFileSync(OUTPUT_FILE, result);
 }
 
-// writeToFileXTimes("abc", 3)
-
-
-//
-// console.log("abcdefg yields... ", lastThreeChars("abcdefg"))
-//
-// console.log("empty string yields... ", lastThreeChars(""))
 
 module.exports = {
   lastThreeChars,

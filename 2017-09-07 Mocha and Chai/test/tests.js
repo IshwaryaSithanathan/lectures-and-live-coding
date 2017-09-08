@@ -16,6 +16,7 @@ describe("lastThreeChars", () => {
   })
 })
 
+
 const OUTPUT_FILE = process.env.OUTPUT_FILE || "test_output.txt"
 
 describe("writeToFileXTimes()", () => {
