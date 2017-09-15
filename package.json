@@ -1,0 +1,27 @@
+{
+  "name": "lectures-and-live-coding",
+  "version": "1.0.0",
+  "description": "By @justinhaaheim",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinhaaheim/lectures-and-live-coding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justinhaaheim/lectures-and-live-coding/issues"
+  },
+  "homepage": "https://github.com/justinhaaheim/lectures-and-live-coding#readme"
+}
