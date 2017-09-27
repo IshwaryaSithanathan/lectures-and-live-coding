@@ -1,0 +1,8 @@
+{
+  "name": "Express Server 101",
+  "version": "",
+  "description": "live coding an express server",
+  "dependencies": {
+    "express": "^4.15.5"
+  }
+}
