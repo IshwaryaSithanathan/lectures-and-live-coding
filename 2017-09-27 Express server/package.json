@@ -1,8 +1,12 @@
 {
-  "name": "Express Server 101",
+  "name": "Express_Server_101",
   "version": "",
   "description": "live coding an express server",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.15.5"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
   }
 }

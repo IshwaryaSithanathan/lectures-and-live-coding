@@ -1,23 +1,28 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 
 const app = express()
 
-app.get('/repeat/:word', (req, res) => {
-  // const word = req.params.word;
-  const { word } = req.params
+app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded({ extended: false }))
 
-  // This is not needed, since req.params.VALUES are always parsed as a string when in the URI: 
-  // if (!typeof word === 'string') {
-  //   res
-  //     .status(400)
-  //     .send("Error: Parameter submitted is not a string.")
-  // }
+app.get('/repeat/:word', (req, res) => {
+  // Traditional syntax:
+  // const word = req.params.word;
+  // ES6 "destructuring" syntax:
+  const { word } = req.params
   res
     .status(200)
     .set('Content-Type', 'application/text')
     .send(`${word} ${word}`)
 })
 
+// Accepts JSON in the form { a: "cat", b: "dog" }
+app.post('/weave', (req, res) => {
+  const { a, b } = req.body
+  res
+    .send(`${a} ${b} ${a} ${b}`)
+})
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
