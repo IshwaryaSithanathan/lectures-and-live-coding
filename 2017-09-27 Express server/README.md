@@ -40,3 +40,25 @@ if HTTP request has a body (ie the method is POST, PUT, DELETE, etc)
 and content type is application/json
 then...
 take the body of this request, parse it into a javascript object, and set req.body to the result
+
+## 2017-10-02 Monday live coding
+### Guest lecturer: Bonnie
+
+**Note: in order to use today's code, you will need to create a `contacts` db:***
+```
+$ createdb contacts
+```
+
+Today we...
+
+- Talked about forking a GitHub repo to contribute when you don't have permissions
+- Reviewed previously written code
+- Created *database.sql* with commands to create a new database with one table
+- Created *seed.sql* to seed our new database with data
+- Discussed how to run the commands from the *.sql* files in the desired database
+- Installed pg-promise
+- Created *database_utilities.js* to hold functions that interface with the database.
+- Discussed how pg-promise functions return a promise, and how to make use of the data in the server.js file
+- Created a route in server.js that returned JSON from
+- Added a Content-Type header to the response object
+- Discussed the difference between res.send() and res.json()
