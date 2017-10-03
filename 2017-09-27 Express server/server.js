@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const { getAllContacts } = require('./database/database_utilities')
 
 const app = express()
 
@@ -22,6 +23,23 @@ app.post('/weave', (req, res) => {
   const { a, b } = req.body
   res
     .send(`${a} ${b} ${a} ${b}`)
+})
+
+// display all contacts in the db
+app.get('/contacts', (req, res) => {
+  // indicate that response is JSON
+  res.setHeader('Content-Type', 'application/json')
+  getAllContacts()
+    .then((data) => {
+      res.send(JSON.stringify(data))
+    })
+    .catch((error) => {
+      res.send(
+        JSON.stringify(
+          {message: `An error occurred: ${error.toString()}`
+        })
+      )
+    })
 })
 
 const port = process.env.PORT || 3000

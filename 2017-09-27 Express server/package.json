@@ -4,7 +4,8 @@
   "description": "live coding an express server",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.15.5"
+    "express": "^4.15.5",
+    "pg-promise": "^6.10.2"
   },
   "scripts": {
     "start": "nodemon server.js"
