@@ -62,3 +62,16 @@ Today we...
 - Created a route in server.js that returned JSON from
 - Added a Content-Type header to the response object
 - Discussed the difference between res.send() and res.json()
+
+
+## 2017-10-04 REST api
+
+CRUD (C: create, R: read, U: update, and D: delete)
+
+GET
+POST
+PUT
+DELETE
+
+
+GET /users/silentsoundz
