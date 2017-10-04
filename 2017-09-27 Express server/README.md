@@ -66,12 +66,22 @@ Today we...
 
 ## 2017-10-04 REST api
 
+Today we...
+
+- Talked about REST api's and how they're used
+- Experimented with the GitHub api and postman to explore use cases and behavior
+- Talked about the four REST operations (CRUD) and the HTTP methods used to carry them out.
+- Designing your API to expose *resources* -- nouns not verbs.
+- The difference between a collection resource and an instance resource
+- One of the differences between PUT and POST: that PUT is *idempotent*
+- Other best practices in API design, including sending links to related resources in your responses
+
+
+**NOTES:**
+
 CRUD (C: create, R: read, U: update, and D: delete)
 
 GET
 POST
 PUT
 DELETE
-
-
-GET /users/silentsoundz
