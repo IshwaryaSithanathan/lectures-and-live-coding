@@ -81,7 +81,11 @@ Today we...
 
 CRUD (C: create, R: read, U: update, and D: delete)
 
-GET
-POST
-PUT
-DELETE
+HTTP methods:
+
+- GET = Read
+- PUT (can be used for create and update)
+- POST (can be used for create and update)
+- DELETE = Delete a resource
+- HEAD = Give me all headers (metadata), no body
+- PATCH - supports partial updates. Still in RFC -- not standardized yet.
