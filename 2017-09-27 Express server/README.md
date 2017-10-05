@@ -89,3 +89,43 @@ HTTP methods:
 - DELETE = Delete a resource
 - HEAD = Give me all headers (metadata), no body
 - PATCH - supports partial updates. Still in RFC -- not standardized yet.
+
+
+## 2017-10-05 Building the REST API
+
+Today we...
+- Talked about using npm scripts like `start`, `db:init`, `db:loadschema` as a way to make our code easily runnable for other developers.
+- Mapped out the api routes that we will be creating (see below)
+- Discussed the difference between PUT and POST: with PUT you need to send along *all* the fields for the resource, including ones you're not updating. With POST you can only send the ones you're updating. This is because PUT is *idempotent*
+- Justin offered a confusing example of PUT vs POST. He's sorry, and will find a clearer one to send along. 😉
+- Wrote database functions to *create*, *read* and *delete* contacts.
+- Talked about SQL injection attacks, and why it's important to use pg-promise's *parameterized queries* (see: https://github.com/vitaly-t/pg-promise#queries-and-parameters)
+- Wrote a RESTful route for getting all contacts
+
+Next up:
+- Write the database function to update a contact
+- Write routes for getting a single contact, creating a contact, deleting a contact and updating a contact
+
+
+
+GET /contacts
+GET /contacts/:id
+(create) PUT /contacts
+
+(update) POST /contacts/:id
+{
+  "phone_num": "555-123-4567"
+}
+
+(delete) DELETE /contacts/:id
+
+
+IF we were using PUT for an update, it would have to look like this:
+```
+(update) PUT /contacts/1
+{
+  "first_name": "Bonnie",
+  "last_name": "Schulkin",
+  "phone_num": "555-123-4567"
+}
+```
