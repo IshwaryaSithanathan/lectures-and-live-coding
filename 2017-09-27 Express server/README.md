@@ -102,6 +102,9 @@ Today we...
 - Talked about SQL injection attacks, and why it's important to use pg-promise's *parameterized queries* (see: https://github.com/vitaly-t/pg-promise#queries-and-parameters)
 - Wrote a RESTful route for getting all contacts
 
+After office hours:
+- Added the `pg-monitor` library to allow easy logging of all SQL queries
+
 Next up:
 - Write the database function to update a contact
 - Write routes for getting a single contact, creating a contact, deleting a contact and updating a contact

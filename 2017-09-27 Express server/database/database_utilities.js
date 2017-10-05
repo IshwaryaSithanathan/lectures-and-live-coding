@@ -1,5 +1,16 @@
-const pgp = require('pg-promise')();
-const db = pgp('postgres://localhost:5432/contactsrestapi');
+const pg_options = {}
+const pgp = require('pg-promise')(pg_options);
+const monitor = require('pg-monitor')
+
+// Adds db query logging to the console
+monitor.attach(pg_options)
+
+const connection_options = {
+  host: 'localhost',
+  port: 5432,
+  database: 'contactsrestapi'
+}
+const db = pgp(connection_options)
 
 
 const getAllContacts = () => {
