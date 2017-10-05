@@ -2,12 +2,19 @@
   "name": "Express_Server_101",
   "version": "",
   "description": "live coding an express server",
+  "scripts": {
+    "start": "nodemon server.js",
+    "db:create": "createdb contactsrestapi",
+    "db:init": "npm run db:loadschema && npm run db:seed",
+    "db:loadschema": "psql contactsrestapi < ./database/schema.sql",
+    "db:seed": "psql contactsrestapi < ./database/seed.sql"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
     "pg-promise": "^6.10.2"
   },
-  "scripts": {
-    "start": "nodemon server.js"
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
