@@ -5,15 +5,19 @@ const apiRouter = require('./routes/api')
 
 const app = express()
 
+// Middleware:
 app.use(bodyParser.json())
+
+// If we were writing a server to accept HTML form requests,
+// we would use this middleware:
 // app.use(bodyParser.urlencoded({ extended: false }))
-//
+
 
 app.use('/api', apiRouter)
 
 app.get('/repeat/:word', (req, res) => {
   // Traditional syntax:
-  // const word = req.params.word;
+  //   const word = req.params.word;
   // ES6 "destructuring" syntax:
   const { word } = req.params
   res

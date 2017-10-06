@@ -2,7 +2,7 @@ const pg_options = {}
 const pgp = require('pg-promise')(pg_options);
 const monitor = require('pg-monitor')
 
-// Adds db query logging to the console
+// pg-monitor adds db query logging to the console
 monitor.attach(pg_options)
 
 const connection_options = {
@@ -44,7 +44,7 @@ const createContact = (first_name, last_name, phone_num) => {
 
 // delete contact
 const deleteContact = (id) => {
-  return db.any(`
+  return db.one(`
     DELETE FROM
       contacts
     WHERE
@@ -56,7 +56,20 @@ const deleteContact = (id) => {
 }
 
 // update contact
-//
+const updateContact = (id, first_name, last_name, phone_num) => {
+  // optional: do some logic here to figure out WHICH fields to update
+  return db.one(`
+    UPDATE
+      contacts
+    SET
+      (first_name, last_name, phone_num)=($2, $3, $4)
+    WHERE
+      contact_id=$1
+    RETURNING
+      *
+  `,
+  [id, first_name, last_name, phone_num])
+}
 
 const closeConnection = () => {
   pgp.end()
@@ -67,4 +80,6 @@ module.exports = {
   getContact,
   createContact,
   deleteContact,
+  updateContact,
+  closeConnection
 }
