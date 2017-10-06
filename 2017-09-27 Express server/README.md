@@ -132,3 +132,16 @@ IF we were using PUT for an update, it would have to look like this:
   "phone_num": "555-123-4567"
 }
 ```
+
+## 2017-10-06 Completing our REST api
+
+Today we...
+
+- Looked at using `pg-monitor` to see the queries made to your database
+- Wrote a database function to update a contact (the caveat: currently you must provide all fields to make an update, even though it's a POST request)
+- Wrote routes to read an individual contact, update a contact, delete a contact and create a contact.
+- Discussed REST conventions, including:
+  - When designing routes your HTTP method is your "verb" and your path is your "noun". You can GET (read) all `/contacts`, or a single contact by `/contacts/:id`. You can POST (update) a single contact at `/contacts/:id`.
+  - What you do *NOT* want to do is make a route to update a single contact at `/contacts` where you pass the id in the body.
+- Talked about the "separation of concerns": how our database file doesn't need to (and shouldn't!) know anything about our server or routes file, and vice versa. Your database file should "expose an API" to the rest of your application that is just the set of functions to access the data.
+- Celebrated! 🎉 We made a REST api!!
