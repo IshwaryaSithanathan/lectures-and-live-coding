@@ -1,6 +1,6 @@
 # Live coding an express server
 
-*In 5 parts
+*In 6 parts. Access the recordings [here](https://www.youtube.com/playlist?list=PLcSbxZVkmW_j4vKYojC8iC1523e_x2FAQ).*
 
 ## 2017-09-27 Wednesday Live Coding
 
