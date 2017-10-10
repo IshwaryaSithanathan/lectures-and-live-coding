@@ -1,14 +1,14 @@
 const fs = require('fs')
 
-const OUTPUT_FILE = process.env.OUTPUT_FILE || "output.txt";
+const OUTPUT_FILE = process.env.OUTPUT_FILE || 'output.txt';
 
 const lastThreeChars = (str) => {
-  let newStr = str.toString()
-  return str.slice(-3);
+  const newStr = str.toString()
+  return newStr.slice(-3);
 }
 
 const writeToFileXTimes = (str, n) => {
-  var result = ""
+  let result = ''
   for (let i = 1; i <= n; i++) {
     result += str
   }
@@ -18,5 +18,5 @@ const writeToFileXTimes = (str, n) => {
 
 module.exports = {
   lastThreeChars,
-  writeToFileXTimes
+  writeToFileXTimes,
 }
