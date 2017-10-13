@@ -3,6 +3,7 @@
 ## What you need to know to get into P3
 
 - Can construct an express app with GET and POST routes, which properly returns JSON with relevant headers and status code.
+  - Can correctly describe HTTP anatomy, role of client and server in HTTP exchanges, what express routes are, different ways to take in parameters and information in express routes, role of bodyParser, etc.
 - Can use `git` (consistent commits, branching) and all typical shell commands for full stack development effectively.
   - Can use a branching strategy where new features are added in branches and then merged back into the master branch. Can use either FF merge or merge-commits.
   - Clearly understands difference between pushing/pulling, committing/merging, fetching, etc.
