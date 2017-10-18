@@ -3,6 +3,8 @@
 // Check Permutation:
 //
 // Given two strings, write a method to decide if one is a permutation of the other.
+//
+// Source: Cracking the Coding Interview 6th ed.
 
 // abcabc => {a: 2, b: 2, c: 2}
 // aabcbc
