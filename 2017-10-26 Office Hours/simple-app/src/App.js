@@ -3,6 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      count: 0
+    }
+    // this.onClick = this.onClick.bind(this)
+  }
+
+  onClick(e) {
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -10,9 +24,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div>
+          <h1>{this.state.count}</h1>
+          <button onClick={this.onClick.bind(this)}>+1</button>
+        </div>
       </div>
     );
   }
