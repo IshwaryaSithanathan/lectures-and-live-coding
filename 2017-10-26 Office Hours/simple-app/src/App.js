@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       count: 0
-    }
+    };
     // this.onClick = this.onClick.bind(this)
   }
 
   onClick(e) {
-    this.setState({
-      count: this.state.count + 1
-    })
+    this.setState((prevState, props) => {
+      return { count: prevState.count + 1 };
+    });
   }
 
   render() {
