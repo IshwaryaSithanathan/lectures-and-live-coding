@@ -1,11 +1,1 @@
-{
-  "extends": "airbnb-base",
-  "plugins": [
-    "mocha"
-  ],
-  "rules": {
-    "mocha/no-exclusive-tests": "error",
-    "max-len": [2, 80],
-    "semi": [1, "never"]
-  }
-}
+/Users/justin/Dropbox/dotfiles/eslintrc-MASTER

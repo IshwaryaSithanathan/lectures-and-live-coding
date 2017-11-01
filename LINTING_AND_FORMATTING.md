@@ -22,8 +22,7 @@ This guide for VSCode looks pretty good (note: you do not need babel-eslint unle
 
 When I start a new project I do the following:
 1. Install the eslint npm packages using the OSX install command that airbnb recommends here: https://www.npmjs.com/package/eslint-config-airbnb-base
-2. Optionally install a plugin for mocha support using `npm install --save-dev eslint-plugin-mocha`
-3. Copy in my generic `.eslintrc` file (see below)
+2. Download/copy over my generic, Learners Guild-oriented `.eslintrc` file [here](.eslintrc).
 
 Here's my setup:
 - atom
@@ -36,20 +35,25 @@ Here's my setup:
   - "eslint"
   - "eslint-config-airbnb-base" which gives you the airbnb javascript style guide eslint rules
   - "eslint-plugin-import"
-  - "eslint-plugin-mocha" (install this one manually)
 - `.eslintrc` configuration file (see below)
 
 **.eslintrc**
+*For my most up-to-date .eslintrc configuration, see the [eslintrc](.eslintrc) file in this repo.*
 ```json
 {
   "extends": "airbnb-base",
-  "plugins": [
-    "mocha"
-  ],
   "rules": {
-    "mocha/no-exclusive-tests": "error",
-    "max-len": [2, 80],
-    "semi": [1, "never"]
+    "max-len": [1, 100],
+    "semi": [1, "never"],
+    "prefer-arrow-callback": 1,
+    "quotes": 1,
+    "prefer-destructuring": 1,
+    "func-names": 0,
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
   }
 }
 ```
