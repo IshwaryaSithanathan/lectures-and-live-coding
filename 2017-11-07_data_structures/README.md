@@ -1,17 +1,17 @@
 # Implementing Basic Data Structures
 
-- Stack (LIFO)
-- Queue (FIFO)
-  - enqueue
-  - dequeue
-  - isEmpty
-  - length
-  - peek
-- Linked List
-- * Doubly Linked List
-- * Tree
-- * Directed graph (2 ways to implement)
-- * Hashmap
+- [x] Stack (LIFO)
+- [ ] Queue (FIFO)
+  - [ ] enqueue
+  - [ ] dequeue
+  - [ ] isEmpty
+  - [ ] length
+  - [ ] peek
+- [ ] Linked List
+- [x] Doubly Linked List*
+- [ ] Tree*
+- [ ] Directed graph (2 ways to implement)*
+- [ ] Hashmap*
 
 
 Next time:
