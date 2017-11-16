@@ -4,6 +4,7 @@
 
 ### Git under the hood
 
+
 - commits are nodes in a linked list that points backward in time.
 
 ```
